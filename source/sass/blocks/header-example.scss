@@ -1,5 +1,5 @@
 .header-example {
-  background-color: #ffffff;
+  background-color: inherit;
   padding: 35px 0;
   z-index: 30;
   transition: transform 0.3s ease, background-color 0.3s ease;
@@ -13,7 +13,7 @@
   }
 
   &--sticky {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -118,7 +118,7 @@
     }
 
     &:not(:last-child) {
-      margin: 0 32px 0 0;
+      margin: 0 34px 0 0;
 
       @media (max-width: 1279px) {
         margin: 0 35px 0 0;
@@ -138,7 +138,7 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 25px;
-    color: $color-tangaroa;
+    color: $color-alice-blue;
     transition: color 0.3s ease;
 
     @media (max-width: 1023px){
@@ -147,6 +147,7 @@
     }
 
    @media (max-width: 767px) {
+      color: $color-tangaroa;
       font-size: 18px;
       line-height: 22px;
     }
