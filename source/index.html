@@ -17,8 +17,27 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header header-example header-example--sticky" data-header="sticky" data-fix-block data-hide-point="50">
+        <div class="container">
+          <a class="logo header-example__logo" href="index.html" aria-label="Переход на главную страницу">
+            <svg width="70" height="38" role="img" aria-label="Логотип Круизы в Антарктику">
+              <use xlink:href="img/sprite.svg#Logo"></use>
+            </svg>
+          </a>
+          <nav class="header-example__nav">
+            <ul class="header-example__list">
+              <li class="header-example__item"><a class="header-example__link" href="#">Преимущества</a></li>
+              <li class="header-example__item"><a class="header-example__link" href="#">Направления</a></li>
+              <li class="header-example__item"><a class="header-example__link" href="#">Ближайшие круизы</a></li>
+              <li class="header-example__item"><a class="header-example__link" href="#" target="_blank">Контакты</a></li>
+            </ul>
+          </nav>
+          <button class="header-example__burger" type="button" aria-label="Переключатель отображения меню" aria-pressed="false" data-burger><span class="header-example__burger-text"></span>
+            <svg class="header-example__burger-icon" width="15" height="15" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
       </header>
       <main>
         <section class="intro">
@@ -28,6 +47,14 @@
             <p>Перед началом разработки не забудьте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="container">
+            <h2 class="visually-hidden">Контакты.</h2>
+            <div class="contacts__wrapper">
+
+            </div>
           </div>
         </section>
       </main>

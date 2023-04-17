@@ -1,0 +1,239 @@
+.header-example {
+  background-color: #ffffff;
+  padding: 35px 0;
+  z-index: 30;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+  @media (max-width: 1023px) {
+    padding: 30px 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 20px 0;
+  }
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  &.is-hidden {
+    transform: translateY(-100%);
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    display: flex;
+    fill: $color-alice-blue;
+
+    @media (max-width: 1279px) {
+      flex-direction: column;
+      transform: scale(0.85);
+    }
+
+   @media (max-width: 1023px) {
+      align-items: center;
+      transform: scale(1);
+      width: 38px;
+      height: 20px;
+    }
+
+    @media (max-width: 767px) {
+      width: 42px;
+      height: 22px;
+    }
+
+    .is-open & {
+      position: relative;
+      z-index: 25;
+      margin-left: 35px;
+      fill: $color-tangaroa;
+    }
+  }
+
+  &__nav {
+   @media (max-width: 767px) {
+      background-color: $color-alice-blue;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      width: 89%;
+      opacity: 0;
+      margin: 0;
+      padding: 85px 25px 20px;
+      position: fixed;
+      pointer-events: none;
+      top: 0;
+      transition: all 0.3s ease;
+      right: 0;
+      visibility: hidden;
+      z-index: 20;
+    }
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      visibility: visible;
+
+      .header-example__item {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    max-width: 700px;
+    padding: 0;
+
+    @media (max-width: 1023px) {
+      max-width: 550px;
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 0 62px 0;
+    }
+  }
+
+  &__item {
+   @media (max-width: 767px) {
+      opacity: 0;
+      transition: all ease-out 0.15s;
+      transform: translateX(-15px);
+    }
+
+    &:not(:last-child) {
+      margin: 0 32px 0 0;
+
+      @media (max-width: 1279px) {
+        margin: 0 35px 0 0;
+      }
+
+     @media (max-width: 1023px) {
+        margin: 0 24px 0 0;
+      }
+
+      @media (max-width: 767px) {
+        margin: 0 0 28px 0;
+      }
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    color: $color-tangaroa;
+    transition: color 0.3s ease;
+
+    @media (max-width: 1023px){
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+   @media (max-width: 767px) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (hover: hover) {
+      &:hover:not(.focus-visible) {
+        &:not(span) {
+          color: #2c39f2;
+        }
+      }
+    }
+  }
+
+  &__burger {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #000000;
+    display: none;
+    padding: 0;
+    position: relative;
+    z-index: 25;
+
+   @media (max-width: 767px) {
+      display: flex;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .is-open {
+      .header-example__burger-text {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease 0s;
+      }
+
+      .header-example__burger-icon {
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity 0.3s ease 0.2s;
+      }
+    }
+  }
+
+  &__burger-text {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 12px;
+    cursor: pointer;
+  }
+
+  &__burger-icon {
+    stroke: #ffffff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+
+    .is-open & {
+      opacity: 1;
+      pointer-events: all;
+      transition: opacity 0.3s ease 0.2s;
+    }
+  }
+}
+
+.header-example__burger-text::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: -12px;
+  width: 24px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+  background-color: $color-tangaroa;
+  box-shadow: 0 6px 0 0 $color-tangaroa, 0 -6px 0 0 $color-tangaroa;
+  transition: opacity 0.3s ease 0.1s;
+  cursor: pointer;
+
+  .is-open & {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease 0s;
+  }
+}
