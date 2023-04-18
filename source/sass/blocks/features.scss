@@ -1,0 +1,125 @@
+.features {
+  position: relative;
+  color: $color-tangaroa;
+  background-color: #c3d9ea;
+  padding-top: 110px;
+  padding-bottom: 120px;
+  background-image: image-set(
+    url("../img/background/features.webp") 1x,
+    url("../img/background/features.jpg") 1x
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include retina {
+    background-image: image-set(
+      url("../img/background/features@2x.webp") 2x,
+      url("../img/background/features@2x.jpg") 2x
+    );
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(227, 236, 246, 0.9);
+  }
+
+  @include vp-1023 {
+    padding-top: 90px;
+    padding-bottom: 100px;
+  }
+
+  @include vp-767 {
+    background-position: left;
+    padding-top: 60px;
+  }
+}
+
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__wrapper h2 {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 50px;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+    margin-bottom: 45px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.features__item {
+  background-color: $color-alice-blue;
+  padding: 30px 30px 45px 30px;
+
+  @include vp-1023 {
+    padding: 25px 16px 20px 20px;
+  }
+
+  @include vp-1023 {
+    &--liner svg {
+      width: 21px;
+      height: 26px;
+    }
+
+    &--all svg {
+      width: 27px;
+      height: 26px;
+    }
+
+    &--zodiac svg {
+      width: 36px;
+      height: 26px;
+    }
+  }
+}
+
+.features__item h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+  @include vp-767 {
+    margin-bottom: 5px;
+  }
+}
+
+.features__item p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
