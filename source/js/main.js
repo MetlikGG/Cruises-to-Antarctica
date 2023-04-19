@@ -6,7 +6,17 @@ import {Burger} from './modules/header/burger';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
+  const control = document.querySelector('[data-validate="control"]');
+  const submit = document.querySelector('[data-validate="submit"]');
+  const data = document.querySelector('[data-validate="data"]');
 
+  control.addEventListener('click', function () {
+    if (data.checked) {
+      submit.disabled = '';
+    } else {
+      submit.disabled = 'disabled';
+    }
+  });
   // Utils
   // ---------------------------------
 
