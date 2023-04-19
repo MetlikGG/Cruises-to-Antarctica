@@ -2,21 +2,22 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {Burger} from './modules/header/burger';
+import './modules/map/map';
 
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
-  const control = document.querySelector('[data-validate="control"]');
-  const submit = document.querySelector('[data-validate="submit"]');
-  const data = document.querySelector('[data-validate="data"]');
+  // const control = document.querySelector('[data-validate="control"]');
+  // const submit = document.querySelector('[data-validate="submit"]');
+  // const data = document.querySelector('[data-validate="data"]');
 
-  control.addEventListener('click', function () {
-    if (data.checked) {
-      submit.disabled = '';
-    } else {
-      submit.disabled = 'disabled';
-    }
-  });
+  // control.addEventListener('click', function () {
+  //   if (data.checked) {
+  //     submit.disabled = '';
+  //   } else {
+  //     submit.disabled = 'disabled';
+  //   }
+  // });
   // Utils
   // ---------------------------------
 
