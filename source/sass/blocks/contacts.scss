@@ -94,3 +94,11 @@
   min-width: 18px;
   margin-right: 10px;
 }
+
+.contacts__item a {
+  color: $color-tangaroa;
+
+  @include hover-focus {
+    opacity: 0.7;
+  }
+}

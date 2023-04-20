@@ -388,10 +388,11 @@
                     data-message-success="Поле заполнено верно" data-required>
                     <input type="email" name="email" aria-label="Email" placeholder="Email" required />
                   </div>
-                  <div class="booking__form-field">
-                    <label data-validate="control">
+                  <div class="booking__form-field" data-validate-type="checkbox" data-on-input-validate
+                      data-message-base="Подтвердите согласие на обработку" data-required>
+                    <label data-validate="control" >
                       <input type="checkbox" data-validate="data" checked />
-                      <span tabindex="0"></span>
+                      <span class="booking__check" tabindex="0"></span>
                       <small>Я согласен на обработку моих персональных данных</small>
                     </label>
                   </div>
