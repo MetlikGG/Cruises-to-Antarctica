@@ -800,6 +800,16 @@ button,
   margin-bottom: 32px;
 }
 
+.booking__form-field .booking__message {
+  bottom: -19px;
+  position: absolute;
+  left: 0;
+}
+
+.booking__form-field .booking__message.is-invalid {
+  color: #ff1553;
+}
+
 .booking__form-field label {
   position: relative;
   padding-left: 23px;
@@ -829,7 +839,7 @@ button,
   margin-top: 3px;
 }
 
-.booking__form-field span {
+.booking__form-field .booking__check {
   position: absolute;
   top: 0;
   left: 0;
@@ -975,6 +985,14 @@ button,
 .contacts__item svg {
   min-width: 18px;
   margin-right: 10px;
+}
+
+.contacts__item a {
+  color: #011c40;
+}
+
+.contacts__item a.focus-visible:focus {
+  opacity: 0.7;
 }
 
 .footer {
@@ -1710,6 +1728,7 @@ button,
 
   .header-example__list {
     max-width: 550px;
+    gap: 5px;
   }
 
   .header-example__item:not(:last-child) {
@@ -2041,6 +2060,9 @@ button,
     -ms-flex-align: start;
     align-items: flex-start;
     margin: 0 0 62px 0;
+    display: -ms-grid;
+    display: grid;
+    overflow: auto;
   }
 
   .header-example__item {
@@ -2224,6 +2246,10 @@ button,
   }
 
   .btn:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+
+  .contacts__item a:hover:not(.focus-visible) {
     opacity: 0.7;
   }
 
