@@ -1208,9 +1208,9 @@ button,
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-color: #011c40;
-  -webkit-box-shadow: 0 6px 0 0 #011c40, 0 -6px 0 0 #011c40;
-  box-shadow: 0 6px 0 0 #011c40, 0 -6px 0 0 #011c40;
+  background-color: #f9fbfd;
+  -webkit-box-shadow: 0 6px 0 0 #f9fbfd, 0 -6px 0 0 #f9fbfd;
+  box-shadow: 0 6px 0 0 #f9fbfd, 0 -6px 0 0 #f9fbfd;
   -webkit-transition: opacity 0.3s ease 0.1s;
   -o-transition: opacity 0.3s ease 0.1s;
   transition: opacity 0.3s ease 0.1s;
