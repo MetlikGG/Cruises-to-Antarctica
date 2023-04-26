@@ -4,7 +4,7 @@
   background-color: $color-tangaroa;
   height: 32.33vw;
   max-height: 386px;
-  width: 100%;
+  // width: 100%;
   cursor: pointer;
 
   @include vp-1023 {
@@ -90,8 +90,10 @@
   top: 30px;
   left: 25px;
   right: 25px;
+  height: 39px;
   padding: 0;
   margin: 0 0 22px;
+  overflow: auto;
 
   @include vp-1023 {
     top: 32px;
@@ -147,10 +149,14 @@
 }
 
 .tours-card__wrapper h4 {
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   font-weight: 500;
   font-size: 14px;
   line-height: 11px;
+
+  @include vp-1023 {
+    margin: -1px 0 4px;
+  }
 
   @include vp-767 {
     line-height: 10px;
@@ -162,7 +168,7 @@
   color: $color-quartz;
   margin: 0;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 20px;
 }
 
 .tours-card__wrapper a {

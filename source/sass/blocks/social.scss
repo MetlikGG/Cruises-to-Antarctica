@@ -1,15 +1,16 @@
 .social {
   display: flex;
   flex-wrap: wrap;
-  align-self: self-end;
   margin-left: auto;
   column-gap: 27px;
   row-gap: 10px;
   max-width: 210px;
+  margin-top: 10px;
 
   @include vp-1023 {
     column-gap: 22px;
     max-width: 120px;
+    margin-top: 0;
   }
 
   @include vp-767 {

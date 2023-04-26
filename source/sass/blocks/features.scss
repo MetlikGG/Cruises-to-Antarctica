@@ -84,10 +84,10 @@
 
 .features__item {
   background-color: $color-alice-blue;
-  padding: 30px 30px 45px 30px;
+  padding: 30px 30px 35px 30px;
 
   @include vp-1023 {
-    padding: 25px 16px 20px 20px;
+    padding: 25px 16px 10px 20px;
   }
 
   @include vp-1023 {
@@ -130,4 +130,5 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 10px;
 }

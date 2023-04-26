@@ -821,15 +821,14 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .booking__form-field label:focus-within {
   outline: 1px solid #d8d8d9;
   outline-offset: 5px;
-}
-
-.booking__form-field label.focus-visible:focus {
-  opacity: 0.8;
 }
 
 .booking__form-field small {
@@ -861,6 +860,10 @@ button,
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
+}
+
+.booking__form-field input.focus-visible:focus {
+  opacity: 0.8;
 }
 
 .booking__form-field input[type=checkbox]:checked + span::after {
@@ -916,6 +919,7 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 
 .btn:disabled {
@@ -940,6 +944,9 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .contacts__map-box {
@@ -952,6 +959,10 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.contacts__inner {
+  width: 49%;
 }
 
 .contacts__inner p {
@@ -1089,9 +1100,8 @@ button,
 }
 
 .is-open .header-example__logo {
-  position: relative;
   z-index: 25;
-  margin-left: 35px;
+  margin-left: 12%;
   fill: #011c40;
 }
 
@@ -1225,6 +1235,10 @@ button,
   transition: opacity 0.3s ease 0s;
 }
 
+.header-example__overlay {
+  display: none;
+}
+
 .hero-block {
   color: #f9fbfd;
   background-color: #011c40;
@@ -1282,15 +1296,13 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -ms-flex-item-align: self-end;
-  -ms-grid-row-align: self-end;
-  align-self: self-end;
   margin-left: auto;
   -webkit-column-gap: 27px;
   -moz-column-gap: 27px;
   column-gap: 27px;
   row-gap: 10px;
   max-width: 210px;
+  margin-top: 10px;
 }
 
 .social__link {
@@ -1361,7 +1373,7 @@ button,
 
 .features__item {
   background-color: #f9fbfd;
-  padding: 30px 30px 45px 30px;
+  padding: 30px 30px 35px 30px;
 }
 
 .features__item h3 {
@@ -1376,6 +1388,7 @@ button,
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 10px;
 }
 
 .tours-card {
@@ -1384,7 +1397,6 @@ button,
   background-color: #011c40;
   height: 32.33vw;
   max-height: 386px;
-  width: 100%;
   cursor: pointer;
 }
 
@@ -1433,8 +1445,10 @@ button,
   top: 30px;
   left: 25px;
   right: 25px;
+  height: 39px;
   padding: 0;
   margin: 0 0 22px;
+  overflow: auto;
 }
 
 .tours-card:hover .tours-card__wrapper,
@@ -1464,7 +1478,7 @@ button,
 }
 
 .tours-card__wrapper h4 {
-  margin: 0 0 8px;
+  margin: 0 0 4px;
   font-weight: 500;
   font-size: 14px;
   line-height: 11px;
@@ -1474,7 +1488,7 @@ button,
   color: #d8d8d9;
   margin: 0;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 20px;
 }
 
 .tours-card__wrapper a {
@@ -1542,47 +1556,6 @@ button,
   gap: 30px;
   width: 100%;
 }
-
-/* @mixin hover-focus {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*  @include hover-focus {
-      opacity: 0.8;
-    }
-*/
-
-/*@mixin hover {
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        @content;
-      }
-    }
-  }
-*/
-
-/*@mixin focus {
-    &.focus-visible:focus {
-      @content;
-    }
-  }
-*/
-
-/*@mixin active {
-    &.focus-visible:active {
-      @content;
-    }
-  }
-*/
 
 @media (max-width: 1279px) {
   .header-example__logo {
@@ -1686,6 +1659,7 @@ button,
 
   .contacts__map-box {
     min-width: 324px;
+    width: 49%;
     height: 335px;
     margin-right: 30px;
   }
@@ -1772,6 +1746,7 @@ button,
     -moz-column-gap: 22px;
     column-gap: 22px;
     max-width: 120px;
+    margin-top: 0;
   }
 
   .social__link svg {
@@ -1800,7 +1775,7 @@ button,
   }
 
   .features__item {
-    padding: 25px 16px 20px 20px;
+    padding: 25px 16px 10px 20px;
   }
 
   .features__item--liner svg {
@@ -1853,6 +1828,10 @@ button,
     top: 75px;
     left: 35px;
     right: 35px;
+  }
+
+  .tours-card__wrapper h4 {
+    margin: -1px 0 4px;
   }
 
   .tours-card__wrapper a {
@@ -1990,6 +1969,10 @@ button,
     order: 1;
   }
 
+  .contacts__inner {
+    width: 100%;
+  }
+
   .contacts__inner p {
     margin-bottom: 25px;
   }
@@ -2077,7 +2060,7 @@ button,
   }
 
   .header-example__item:not(:last-child) {
-    margin: 0 0 28px 0;
+    margin: 0 0 23px 0;
   }
 
   .header-example__link {
@@ -2094,6 +2077,17 @@ button,
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+  }
+
+  .is-open .header-example__overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 43, 102, 0.5);
+    cursor: pointer;
   }
 
   .hero-block {
@@ -2242,7 +2236,16 @@ button,
 }
 
 @media (hover: hover) {
+  .booking__form input:hover:not(.focus-visible) {
+    outline: 2px solid #011c40;
+    outline-offset: -4px;
+  }
+
   .booking__form-field label:hover:not(.focus-visible) {
+    opacity: 0.8;
+  }
+
+  .booking__form-field input:hover:not(.focus-visible) {
     opacity: 0.8;
   }
 

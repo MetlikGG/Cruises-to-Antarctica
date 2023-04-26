@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const control = document.querySelector('[data-validate="control"]');
   const submit = document.querySelector('[data-validate="submit"]');
   const data = document.querySelector('[data-validate="data"]');
+  const checkbox = document.querySelector('input[type="checkbox"]');
 
   control.addEventListener('click', function () {
     if (data.checked) {
@@ -16,6 +17,10 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
       submit.disabled = 'disabled';
     }
+  });
+
+  checkbox.addEventListener('click', function () {
+    checkbox.blur();
   });
   // Utils
   // ---------------------------------

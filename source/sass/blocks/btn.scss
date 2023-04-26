@@ -11,6 +11,7 @@
   background-color: $color-alice-blue;
   width: 100%;
   user-select: none;
+  cursor: pointer;
 
   &:disabled {
     opacity: 0.5;
