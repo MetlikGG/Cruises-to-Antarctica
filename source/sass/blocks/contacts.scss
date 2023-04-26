@@ -29,19 +29,13 @@
   margin-right: 100px;
   background-color: #b8c4ca;
 
-  background-image: image-set(
-    url("../img/background/map.webp") 1x,
-    url("../img/background/map.jpg") 1x
-  );
+  background-image: url("../img/background/map.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include retina {
-    background-image: image-set(
-      url("../img/background/map@2x.webp") 2x,
-      url("../img/background/map@2x.jpg") 2x
-    );
+    background-image: url("../img/background/map@2x.webp");
   }
 
   @include vp-1023 {

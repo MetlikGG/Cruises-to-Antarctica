@@ -690,8 +690,7 @@ button,
   background-color: #768495;
   color: #011c40;
   padding: 50px 0;
-  background-image: -webkit-image-set(url("../img/background/booking.webp") 1x, url("../img/background/booking.jpg") 1x);
-  background-image: image-set(url("../img/background/booking.webp") 1x, url("../img/background/booking.jpg") 1x);
+  background-image: url("../img/background/booking.webp");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
@@ -954,8 +953,7 @@ button,
   height: 306px;
   margin-right: 100px;
   background-color: #b8c4ca;
-  background-image: -webkit-image-set(url("../img/background/map.webp") 1x, url("../img/background/map.jpg") 1x);
-  background-image: image-set(url("../img/background/map.webp") 1x, url("../img/background/map.jpg") 1x);
+  background-image: url("../img/background/map.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1242,8 +1240,7 @@ button,
 .hero-block {
   color: #f9fbfd;
   background-color: #011c40;
-  background-image: -webkit-image-set(url("../img/background/hero-block.webp") 1x, url("../img/background/hero-block.jpg") 1x);
-  background-image: image-set(url("../img/background/hero-block.webp") 1x, url("../img/background/hero-block.jpg") 1x);
+  background-image: url("../img/background/hero-block.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1325,8 +1322,7 @@ button,
   background-color: #c3d9ea;
   padding-top: 110px;
   padding-bottom: 120px;
-  background-image: -webkit-image-set(url("../img/background/features.webp") 1x, url("../img/background/features.jpg") 1x);
-  background-image: image-set(url("../img/background/features.webp") 1x, url("../img/background/features.jpg") 1x);
+  background-image: url("../img/background/features.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2215,23 +2211,19 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .booking {
-    background-image: -webkit-image-set(url("../img/background/booking@2x.webp") 2x, url("../img/background/booking@2x.jpg") 2x);
-    background-image: image-set(url("../img/background/booking@2x.webp") 2x, url("../img/background/booking@2x.jpg") 2x);
+    background-image: url("../img/background/booking@2x.webp");
   }
 
   .contacts__map-box {
-    background-image: -webkit-image-set(url("../img/background/map@2x.webp") 2x, url("../img/background/map@2x.jpg") 2x);
-    background-image: image-set(url("../img/background/map@2x.webp") 2x, url("../img/background/map@2x.jpg") 2x);
+    background-image: url("../img/background/map@2x.webp");
   }
 
   .hero-block {
-    background-image: -webkit-image-set(url("../img/background/hero-block@2x.webp") 2x, url("../img/background/hero-block@2x.jpg") 2x);
-    background-image: image-set(url("../img/background/hero-block@2x.webp") 2x, url("../img/background/hero-block@2x.jpg") 2x);
+    background-image: url("../img/background/hero-block@2x.webp");
   }
 
   .features {
-    background-image: -webkit-image-set(url("../img/background/features@2x.webp") 2x, url("../img/background/features@2x.jpg") 2x);
-    background-image: image-set(url("../img/background/features@2x.webp") 2x, url("../img/background/features@2x.jpg") 2x);
+    background-image: url("../img/background/features@2x.webp");
   }
 }
 

@@ -4,19 +4,13 @@
   background-color: #c3d9ea;
   padding-top: 110px;
   padding-bottom: 120px;
-  background-image: image-set(
-    url("../img/background/features.webp") 1x,
-    url("../img/background/features.jpg") 1x
-  );
+  background-image: url("../img/background/features.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include retina {
-    background-image: image-set(
-      url("../img/background/features@2x.webp") 2x,
-      url("../img/background/features@2x.jpg") 2x
-    );
+    background-image: url("../img/background/features@2x.webp");
   }
 
   &::before {
